@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PZ1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" WindowStyle="None" BorderBrush="Black" BorderThickness="2" Height="600" Width="1100" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    
+    <Grid Margin="0,0,0,0">       
+        <DockPanel Margin="0,0,0,0">
+            <StackPanel Orientation="Horizontal" DockPanel.Dock ="Top" Margin="25,0,0,0" Height="50">
+                <Button DockPanel.Dock ="Top" Content="Elipse" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Elipse_Click"></Button>
+                <Button Content="Rechtangle" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Rechtangle_Click"></Button>
+                <Button Content="Polygon" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Polygon_Click"></Button>
+                <Button Content="Image" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Image_Click"></Button>
+                <Button Content="Undo" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Undo_Click"></Button>
+                <Button Content="Redo" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Redo_Click"></Button>
+                <Button Content="Clear" Height="50" Width="140" BorderBrush="Transparent" Background="Transparent" FontSize="20" Click="Button_Clear_Click"></Button>
+                <Button Margin="30,0,0,0" Content="X" Height="50" Width="60" BorderBrush="Transparent" Background="Transparent" FontSize="25" Click="Button_X_Click"></Button>
+            </StackPanel>
+            <Canvas Name="canvas" Background="White" RenderTransformOrigin="0.5,0.5" MouseRightButtonDown="Canvas_MouseRightButtonDown" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" Margin="0,0,0,12">
+                <Canvas.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="-1"/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Canvas.RenderTransform>
+            </Canvas>
+        </DockPanel>        
+    </Grid>    
 </Window>
+    
+    
